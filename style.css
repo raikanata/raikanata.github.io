@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+body {
+    color:#242e6f;
+    font-family:Karla;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* center horizontally */
+    margin: 6vh 0; /* 10% margin top and bottom */
+}
+
+.sidebar, .main {
+    background-color: #f3f7fb; /* light gray */
+    padding: 20px;
+    overflow-wrap: break-word;
+    box-shadow: 0 0 10px rgba(194, 213, 232, 1);
+    justify-content: center;
+}
+
+.sidebar #icon {
+    transition: transform .7s ease-in-out;
+    width: 100%; /* adjust the icon size */
+    height: auto;
+    vertical-align: middle; /* align the icon with the text */
+    border-radius: 50%;
+    margin-bottom:15px;
+    box-shadow: 0 0 20px rgba(194, 213, 232, 1);
+
+}
+#icon:hover {
+    transform: rotate(-10deg);
+}
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 3rem; /* increase padding to 3rem */
+}
+
+.sidebar {
+    flex: 2; /* increase flex value to make sidebars wider */
+    max-width: 15vw; /* increase max-width to 30% of the viewport width */
+    margin: 0 1.5rem; /* increase margin to 1.5rem */
+    height: auto;
+    display:block;
+
+}
+
+.main {
+    flex: 3; /* increase flex value to make main content area wider */
+    width: 40vw; /* set a maximum width of 60% of the viewport width */
+    margin: 0 1.5rem; /* increase margin to 1.5rem */
+    height: auto;
+    min-height:100%;
+    display:block;
+
+}
+
+.main img{
+    max-width:100%;
+    margin: 10px 0px;
+}
+p{
+    margin:10px 0px;
+}
+.sidebar + .main, .main + .sidebar {
+    margin-left: 10px; /* add space between columns */
+}
+
+.post {
+    text-align: center;
+    background-color: #fff; /* soft white */
+    border: 1px solid #C2D5E8; /* thin gray border */
+    padding: 20px;
+    margin-top: 20px; /* add space between posts */
+}
+.post img{
+    max-width:100%;
+    margin: 20px 0px;
+}
+
+.os-note li{
+    margin:0px 30px;
+}
+
+a {
+    color: #297ac3;
+}
+a:hover{
+    color:#8dd110;
+}
+
+@media only screen and (max-width: 800px) {
+    .sidebar {
+        display:none;
+    }
+    .main{
+        width:90%;
+    }
+}
